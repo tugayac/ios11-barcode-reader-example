@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hDo-F3-8qr">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="air-BT-2XN">
+            <objects>
+                <viewController id="hDo-F3-8qr" customClass="ViewController" customModule="Barcode_Detection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e3h-6W-1oU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ozt-xk-eGg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HL7-jZ-Xq9">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3u-JN-vRh">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2z7-b9-ver" appends="YES" id="Ern-J9-q2U"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G3u-JN-vRh" firstAttribute="bottom" secondItem="Ozt-xk-eGg" secondAttribute="top" id="7H9-tP-v6s"/>
+                            <constraint firstItem="G3u-JN-vRh" firstAttribute="top" secondItem="HL7-jZ-Xq9" secondAttribute="top" id="GgC-B6-t4a"/>
+                            <constraint firstItem="G3u-JN-vRh" firstAttribute="leading" secondItem="HL7-jZ-Xq9" secondAttribute="leading" id="jf9-RL-uMI"/>
+                            <constraint firstAttribute="trailing" secondItem="G3u-JN-vRh" secondAttribute="trailing" id="yP0-6K-LBd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoOutputView" destination="G3u-JN-vRh" id="l5f-WV-LKv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccu-a7-gW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2z7-b9-ver">
+                    <connections>
+                        <action selector="handleVideoTapGestureWithRecognizer:" destination="hDo-F3-8qr" id="9i6-K4-vZz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="414" y="-113"/>
+        </scene>
+    </scenes>
+</document>

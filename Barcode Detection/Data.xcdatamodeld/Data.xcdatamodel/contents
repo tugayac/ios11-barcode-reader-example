@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13221.4" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ModuleInfo" representedClassName="ModuleInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="modules" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
+        <attribute name="assignedTo" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="modules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ModuleInfo" inverseName="tasks" inverseEntity="ModuleInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ModuleInfo" positionX="-54" positionY="-9" width="128" height="28"/>
+        <element name="Task" positionX="-36" positionY="36" width="128" height="135"/>
+    </elements>
+</model>
